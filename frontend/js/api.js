@@ -11,7 +11,7 @@ async function apiFetch(ruta, opciones) {
     const headers = { "Content-Type": "application/json" };
 
     if (token) {
-        headers.Authorization = token;
+        headers.Authorization = "Bearer " + token;
     }
 
     const respuesta = await fetch(API_URL + ruta, {
